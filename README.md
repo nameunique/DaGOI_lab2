@@ -34,7 +34,12 @@ To load an html page and run it on the ESP32, you need to have exactly the same 
 
 ## How to upload code to ESP
 
-1. Choose needed board and set upload speed 115200
+1. Choose needed board and set upload speed 115200 (prj starts on NodeMCU ESP32)
 2. Load to ESP Arduino code
-3. After load arduino code need to add some data (out html page and more in the data folder) - need to push **ESP32 Sketch Data Upload** 
+3. After load arduino code need to add some data (out html page and another in the data folder) - need to push **ESP32 Sketch Data Upload** 
 4. Check page IP address in Serial Monitor
+
+
+## Aditional info
+NodeMCU ESP32 pinout
+![Alt text](images_for_readme/nodemcu32s.png)
