@@ -26,7 +26,7 @@ After these manipulations, an additional window will appear in the Tools menu
 
 ![Alt text](images_for_readme/new_tool.png)
 
-Thanks https://randomnerdtutorials.com/install-esp32-filesystem-uploader-arduino-ide/
+Thanks for https://randomnerdtutorials.com/install-esp32-filesystem-uploader-arduino-ide/
 
 ## Folder system
 
