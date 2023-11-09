@@ -34,12 +34,17 @@ To load an html page and run it on the ESP32, you need to have exactly the same 
 
 ## How to upload code to ESP
 
-1. Choose needed board and set upload speed 115200 (prj starts on NodeMCU ESP32)
+1. Choose board NodeMCU-32S and set upload speed 115200
 2. Load to ESP Arduino code
 3. After load arduino code need to add some data (out html page and another in the data folder) - need to push **ESP32 Sketch Data Upload** 
 4. Check page IP address in Serial Monitor
-
+5. Open page somethere in local network with http://ip_from_esp/
 
 ## Aditional info
 NodeMCU ESP32 pinout
 ![Alt text](images_for_readme/nodemcu32s.png)
+
+A4988 pinout and connection. Thanks for https://alexgyver.ru/gyverstepper/
+![Alt text](images_for_readme/a4988pinout.png)
+
+Motor stepper 17HS4401 with driver A4988. Logic signal 5v. Power supply for driver ac/dc adaptor input 100-240V-50/60Hz, output dc12v 3a

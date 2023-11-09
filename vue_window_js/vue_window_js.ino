@@ -99,6 +99,14 @@ void setup() {
     request->send(200, "text/plain", "motor stopped");
   });
 
+  server.on("/speed_motor", HTTP_GET, [](AsyncWebServerRequest *request) {
+    if (request->hasParam("speed")) {
+      int speedd = request->getParam("speed")->value().toInt();
+      currentSpeed = speedd;
+    }
+    request->send(200, "text/plain", "");
+  });
+
   server.begin();
 }
 

@@ -1,56 +1,8 @@
-<!-- <!DOCTYPE html>
-<html>
-<head>
-  <title>ESP32 Web Server</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="data:,">
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <script>
-    var potentiometerValue = 0; // Изначальное значение потенциометра
-    
-    // Функция для обновления значения потенциометра на странице
-    function updatePotentiometerValue(value) {
-      document.getElementById("potentiometer-value").textContent = "Potentiometer Value: " + value;
-    }
-    
-    // Функция для выполнения запроса на обновление значения потенциометра с сервера
-    function updatePotentiometer() {
-      fetch('/getPotentiometer')
-        .then(response => response.text())
-        .then(data => {
-          potentiometerValue = data;
-          updatePotentiometerValue(potentiometerValue);
-        });
-    }
-    
-    // Обновление значения потенциометра каждую секунду
-    setInterval(updatePotentiometer, 1000);
-  </script>
-</head>
-<body>
-  <h1>ESP32 Web Server</h1>
-  <p>GPIO state: <strong>%STATE%</strong></p>
-  <p><a href="/on"><button class="button">ON</button></a></p>
-  <p><a href="/off"><button class="button button2">OFF</button></a></p>
-  <p id="potentiometer-value">Potentiometer Value: 0</p>
-</body>
-</html> -->
 <!DOCTYPE html>
 <html>
 <head>
-  <title>ESP32 Web Server</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="data:,">
   <link rel="stylesheet" type="text/css" href="style.css">
-  <style>
-    /* Добавляем стили для масштабирования */
-    @media only screen and (max-width: 600px) {
-      .button {
-        font-size: 16px;
-        padding: 8px 20px;
-      }
-    }
-  </style>
   <script>
     var potentiometerValue = 0; // Изначальное значение потенциометра
     var currentSpeed = 10; // Изначальная скорость вращения
@@ -75,6 +27,12 @@
     function updateSpeed(speed) {
       currentSpeed = speed;
       updateSpeedSliderValue(speed);
+
+      fetch('/speed_motor?speed=' + speed)
+        .then(response => response.text())
+        .then(data => {
+          
+        });
     }
 
     function startRotation(clockwise) {
