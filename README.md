@@ -40,11 +40,22 @@ To load an html page and run it on the ESP32, you need to have exactly the same 
 4. Check page IP address in Serial Monitor
 5. Open page somethere in local network with http://ip_from_esp/
 
+## How it looks like
+
+At PC:\
+![Alt text](images_for_readme/pc_view.png)
+
+At smartphone:\
+![Alt text](images_for_readme/phone_view.png)
+
+Video demonstration:\
+<video src="images_for_readme/lab2.mp4" controls title="Title"></video>
+
 ## Aditional info
-NodeMCU ESP32 pinout
+NodeMCU ESP32 pinout\
 ![Alt text](images_for_readme/nodemcu32s.png)
 
-A4988 pinout and connection. Thanks for https://alexgyver.ru/gyverstepper/
+A4988 pinout and connection. Thanks for https://alexgyver.ru/gyverstepper/\
 ![Alt text](images_for_readme/a4988pinout.png)
 
 Motor stepper 17HS4401 with driver A4988. Logic signal 5v. Power supply for driver ac/dc adaptor input 100-240V-50/60Hz, output dc12v 3a
